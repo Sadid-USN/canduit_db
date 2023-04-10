@@ -1,0 +1,20 @@
+name: auth
+description: auth Service
+version: 1.0.0
+# repository: https://github.com/my_org/my_repo
+
+environment:
+  sdk: '>=2.19.6 <3.0.0'
+
+dependencies:
+  conduit: ^4.3.9
+  conduit_core: ^4.3.2
+  conduit_postgresql: ^4.3.2
+  jaguar_jwt: 3.0.0
+
+dependency_overrides:
+  file: ^6.1.4
+
+dev_dependencies:
+  lints: ^2.0.0
+  test: ^1.21.0
