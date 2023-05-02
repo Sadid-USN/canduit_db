@@ -9,9 +9,14 @@ class _User {
   String ? username;
   @Column(unique: true, indexed: true)
   String ? email;
+  @Serialize(input: true, output: false) // get data but don't save it in db
   String ? password;
   @Column(nullable: true)
   String ? accessToken;
   @Column(nullable: true)
   String ? refreshToken;
+  @Column(omitByDefault: true) // we save this data in db but while requested, we should not return it
+  String ? salt;
+  @Column(omitByDefault: true)
+  String ? hashPassword;
 }
